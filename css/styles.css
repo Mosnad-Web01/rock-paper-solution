@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.choice::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.choice[data-choice='rock']::before {
+  background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.choice[data-choice='paper']::before {
+  background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.choice[data-choice='scissors']::before {
+  background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.bg-gradient {
+  height: 100vh;
+  background: radial-gradient(at top, #1f3756, #141539), no-repeat;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

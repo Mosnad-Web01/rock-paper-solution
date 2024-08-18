@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .choice {
+          @apply bg-white border-[#606e85] rounded-full h-28 w-28 flex items-center justify-center relative;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gradient my-12">
+    <header
+      class="border-4 border-[#606e85] rounded-md flex justify-between p-4 max-w-screen-sm mx-auto"
+    >
+      <figure class="scale-[0.8]">
+        <img src="./images/logo.svg" alt="Rock, Paper, Scissors" />
+      </figure>
+      <div class="bg-white grid grid-row-2 place-content-center py-4 px-6">
+        <p
+          class="uppercase font-semibold text-[#2a46c0] tracking-widest text-sm"
+        >
+          Score
+        </p>
+        <p id="score" class="text-5xl font-bold text-center text-[#3b4363]">
+          0
+        </p>
+      </div>
+    </header>
+    <main>
+      <section
+        class="grid grid-rows-2 grid-cols-2 place-items-center my-12"
+        data-name="bored"
+      >
+        <button class="choice" data-choice="paper">
+          <figure>
+            <img src="./images/icon-paper.svg" alt="Paper" />
+          </figure>
+        </button>
+
+        <button class="choice" data-choice="scissors">
+          <figure>
+            <img src="./images/icon-scissors.svg" alt="Scissors" />
+          </figure>
+        </button>
+
+        <button class="col-span-2 choice" data-choice="rock">
+          <figure>
+            <img src="./images/icon-rock.svg" alt="Rock" />
+          </figure>
+        </button>
+      </section>
+
+      <button
+        class="py-1 px-8 border uppercase rounded-md text-white tracking-widest font-semibold hover:bg-[#606e85] mt-8 mx-auto block"
+      >
+        Rules
+      </button>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+
+    <script src="./javascript/main.js"></script>
+  </body>
+</html>
